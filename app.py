@@ -9,8 +9,8 @@ def home():
     <body style="background-color:orange; text-align:center;">
     <h1 style="color:white;">🚀 Hello from Python </h1>
     <h2 style="color:cyan;">Docker App Running on EC2 🚀</h2>
-        </body>
-        </html>
+    </body>
+    </html>
         """
 
 @app.route("/health")
