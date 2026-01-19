@@ -4,7 +4,14 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Hello from Python Docker App running on EC2 🚀"
+    return """
+    <html>
+    <body style="background-color:orange; text-align:center;">
+    <h1 style="color:white;">🚀 Hello from Python </h1>
+    <h2 style="color:cyan;">Docker App Running on EC2 🚀</h2>
+        </body>
+        </html>
+        """
 
 @app.route("/health")
 def health():
