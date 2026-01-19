@@ -6,17 +6,32 @@ app = Flask(__name__)
 def home():
     return """
     <html>
-    <body style="background-color:orange; text-align:center;">
-    <h1 style="color:white;">🚀 Hello from Python </h1>
-    <h2 style="color:cyan;">Docker App Running on EC2 🚀</h2>
-    </body>
+      <head>
+        <title>Docker App</title>
+        <style>
+          body {
+            background-color: black;
+            color: lime;
+            font-family: Arial;
+            text-align: center;
+            margin-top: 100px;
+          }
+          h1 {
+            color: cyan;
+          }
+          p {
+            color: orange;
+            font-size: 20px;
+          }
+        </style>
+      </head>
+      <body>
+        <h1>🚀 Docker App Running on EC2</h1>
+        <p>Colored Output from Flask + Docker</p>
+      </body>
     </html>
-        """
-
-@app.route("/health")
-def health():
-    return {"status": "UP"}
+    """
 
 if __name__ == "__main__":
-    print("\033[96mStarting Flask Docker App...\033[0m")
     app.run(host="0.0.0.0", port=5000)
+
