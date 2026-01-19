@@ -18,4 +18,5 @@ def health():
     return {"status": "UP"}
 
 if __name__ == "__main__":
+    print("\033[96mStarting Flask Docker App...\033[0m")
     app.run(host="0.0.0.0", port=5000)
