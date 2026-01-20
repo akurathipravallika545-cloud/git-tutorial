@@ -5,30 +5,30 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return """
+    <!DOCTYPE html>
     <html>
-      <head>
-        <title>Docker App</title>
+    <head>
         <style>
-          body {
-            background-color: black;
-            color: lime;
-            font-family: Arial;
-            text-align: center;
-            margin-top: 100px;
-          }
-          h1 {
-            color: cyan;
-          }
-          p {
-            color: orange;
-            font-size: 20px;
-          }
+            body {
+                background-color: #0f172a;
+                color: white;
+                font-family: Arial;
+                text-align: center;
+                margin-top: 80px;
+            }
+            h1 {
+                color: #38bdf8;
+            }
+            p {
+                color: #4ade80;
+                font-size: 22px;
+            }
         </style>
-      </head>
-      <body>
-        <h1>🚀 Docker App Running on EC2</h1>
-        <p>Colored Output from Flask + Docker</p>
-      </body>
+    </head>
+    <body>
+        <h1>🚀 Docker Flask App</h1>
+        <p>Running from GitHub → EC2 → Docker</p>
+    </body>
     </html>
     """
 
